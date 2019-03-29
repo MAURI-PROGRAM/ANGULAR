@@ -6,24 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mi-primer-proyecto';
-  users = ['Michael','Pamela','Cindy','Kristy','Laura','Pame'];
-  activated:boolean = false;
-  name:string = 'Ryan Ryan'
-  edad:number;
-  address: {
-    street:string;
-    city:string;
-  };
-  hobbies:string[];
-  constructor(){
-    this.edad = 28;
-    this.address={
-      street:'222 Bruklyn',
-      city:'Londres'
-    };
-    this.hobbies = ['read','writing'];
+  users:string[] =['ray','you','bryan'];
 
+  sayHello(name:string){
+    alert("Hello"+name);
   }
-
+  deleteUser(user){
+    alert(user);
+    for(let i =0; i<this.users.length;i++){
+      if(user == this.users[i]){
+        this.users.splice(i,1);
+      }
+    }
+    
+  }
 }

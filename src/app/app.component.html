@@ -1,11 +1,7 @@
-<div>
-  <p>name: {{name}}</p>
-  <p>street:{{address.street}}</p>
-  <p>street:{{address.city}}</p>
-  <ul>
-    <li *ngFor="let hobby of hobbies">
-      {{hobby}}
-    </li>
-  </ul>
-</div>
+<ul>
+  <li *ngFor = "let user of users">
+      {{user}}
+    <button (click)="deleteUser(user)">Eliminar</button>   
+  </li>
+</ul>
 
