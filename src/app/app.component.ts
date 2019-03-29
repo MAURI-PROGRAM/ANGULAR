@@ -7,5 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mi-primer-proyecto';
-  users = ['Michael','Pamela','Cindy','Kristy','Laura','Pame']
+  users = ['Michael','Pamela','Cindy','Kristy','Laura','Pame'];
+  activated:boolean = false;
+  name:string = 'Ryan Ryan'
+  edad:number;
+  adress: {
+    street:string;
+    city:string;
+  };
+  hobbies:string[];
+  constructor(){
+    this.edad = 28;
+    this.adress={
+      street:'222 Bruklyn',
+      city:'Londres'
+    };
+    this.hobbies = ['read','writing'];
+
+  }
+
 }
