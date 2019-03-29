@@ -8,14 +8,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
   users:string[] =['ray','you','bryan'];
 
-  sayHello(name:string){
-    alert("Hello"+name);
+  addUser(name){
+    this.users.push(name.value);
+    name.value='';
+    name.focus();
+    return false
   }
+
   deleteUser(user){
-    alert(user);
     for(let i =0; i<this.users.length;i++){
       if(user == this.users[i]){
         this.users.splice(i,1);
+        break;
       }
     }
     
