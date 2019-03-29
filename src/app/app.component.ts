@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
-
+import {DataService} from './data.service'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  posts=[];
+  constructor(private data:DataService){
+    this.data.getData().subscribe(data=>{
+      this.posts=data;
+    });
+  }
+
+  name = "jhon Carter";
+  age=19;
   users:string[] =['ray','you','bryan'];
 
   addUser(name){
@@ -21,7 +30,7 @@ export class AppComponent {
         this.users.splice(i,1);
         break;
       }
-    }
-    
+    }    
   }
+
 }
