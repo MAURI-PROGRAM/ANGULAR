@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mi-primer-proyecto';
+  users = ['Michael','Pamela','Cindy','Kristy','Laura','Pame']
 }
