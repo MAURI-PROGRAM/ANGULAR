@@ -11,14 +11,14 @@ export class AppComponent {
   activated:boolean = false;
   name:string = 'Ryan Ryan'
   edad:number;
-  adress: {
+  address: {
     street:string;
     city:string;
   };
   hobbies:string[];
   constructor(){
     this.edad = 28;
-    this.adress={
+    this.address={
       street:'222 Bruklyn',
       city:'Londres'
     };
